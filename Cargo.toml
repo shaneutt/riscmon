@@ -1,0 +1,24 @@
+[package]
+name = "riscmon"
+version = "0.0.1"
+edition = "2024"
+publish = false
+authors = ["Shane Utt <shaneutt@linux.com>"]
+description = "RISC-V Machine Monitor"
+license = "MIT"
+
+[[bin]]
+name = "riscmon"
+path = "src/main.rs"
+test = false
+bench = false
+
+[profile.release]
+panic = "abort"
+opt-level = "z"
+lto = true
+
+[profile.dev]
+panic = "abort"
+
+[dependencies]

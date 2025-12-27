@@ -1,0 +1,10 @@
+[package]
+name = "integration"
+version = "0.0.1"
+edition = "2024"
+publish = false
+
+# This crate is intentionally NOT a member of any workspace so that
+# `cargo test` at the repository root never runs these tests.
+# To run: cargo test --manifest-path tests/integration/Cargo.toml
+[workspace]
